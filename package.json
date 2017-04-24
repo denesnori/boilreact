@@ -8,7 +8,9 @@
     "lint": "eslint src",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",
-    "postbuild": "copyfiles index.html dist"
+    "postbuild": "copyfiles index.html dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Besart Hoxhaj",
   "license": "ISC",
@@ -24,7 +26,8 @@
     "rimraf": "^2.6.0",
     "tape": "^4.6.3",
     "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack-dev-server": "^2.2.0",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",
